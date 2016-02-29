@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+public class SimpleFileMove
+{
+    static void Main()
+    {
+        //Here we define our path variables
+        string sourceFile = @"C:/Users/earsie1977/DeskTop/FolderA/";
+        string destinationFile = @"C:/Users/earsie1977/DeskTop/FolderB/";
+
+        // To move a file or folder to a new location:
+
+        foreach (string file in Directory.GetFiles(sourceFile)) //created string var 'file' for files
+        {
+            DateTime dt = File.GetLastWriteTime(file); //last modification time
+            TimeSpan diff = DateTime.Now - dt; //difference in the two times
+            double secs = diff.TotalSeconds; //extract the seconds attribute
+            destinationFile = System.IO.Path.Combine(destinationFile, file);  //define the destination
+            Console.WriteLine("File last write time: {0}, {1}", secs.ToString(), file); //verify comm
+
+            //Set the time parameter for the file transfer as a try/catch statement with error log 'e'
+            if (secs < 86400)
+                try
+                {
+                    System.IO.File.Copy(file, destinationFile, true);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            else
+            {
+                Console.WriteLine("All of the files are more than a day old.");
+            }
+
+            //else statement ensures that time requirement for moved files is set.  
+        }
+
+    }
+}

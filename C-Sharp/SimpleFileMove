@@ -10,8 +10,8 @@ public class SimpleFileMove
     static void Main()
     {
         //Here we define our path variables
-        string sourceFile = @"C:/Users/earsie1977/DeskTop/FolderA/";
-        string destinationFile = @"C:/Users/earsie1977/DeskTop/FolderB/";
+        string sourceFile = @"C:/DeskTop/FolderA/";
+        string destinationFile = @"C:DeskTop/FolderB/";
 
         // To move a file or folder to a new location:
 

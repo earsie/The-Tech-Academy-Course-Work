@@ -7,14 +7,14 @@ from tkinter import ttk
 from tkinter import messagebox
 
 phonelist = [
-  ['Meyers, Chris',  '343-4349'],
-  ['Smith, Robert',  '689-1234'],
-  ['Jones, Janet',   '483-5432'],
-  ['Barnhart, Ralph','683-2341'],
-  ['Nelson, Eric',   '485-2689'],
-  ['Prefect, Ford',  '987-6543'],
-  ['Zigler, Mary',   '567-8901'],
-  ['Smith, Bob',     '689-1234']
+  ['Blue, Chris',  '343-4349'],
+  ['Green, Robert',  '689-1234'],
+  ['Orange, Janet',   '483-5432'],
+  ['Purple, Ralph','683-2341'],
+  ['Yellow, Eric',   '485-2689'],
+  ['Greene, Ford',  '987-6543'],
+  ['Black, Mary',   '567-8901'],
+  ['White, Bob',     '689-1234']
 ]
 
 nameList = [name[0] for name in phonelist]
